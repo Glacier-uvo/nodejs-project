@@ -22,3 +22,8 @@ jobs:
       
       - name: run tests
         run: npm test
+      
+      - name: docker build ci
+        run: docker build notes-api-ci .
+
+      
