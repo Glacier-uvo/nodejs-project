@@ -12,11 +12,11 @@ A simple REST API built with Node.js, Express, and MongoDB. The application is c
 
 ## Project Structure
 nodejs-project/
-├── server.js
-├── package.json
-├── package-lock.json
-├── Dockerfile
-└── README.md
+-server.js
+-package.json
+-package-lock.json
+-Dockerfile
+-README.md
 
 ## API Endpoints
 
@@ -31,14 +31,17 @@ nodejs-project/
 
 ## Running Locally
 Create package.json:
+
 npm init -y
 
 
 Install the dependencies:
+
 npm install express mongodb
 
 
 Start the application:
+
 node server.js
 
 The application connects to MongoDB asynchronously before starting the Express server.
@@ -48,9 +51,12 @@ The API will run on the configured port.
 ## Running with Docker
 
 Build the Docker image:
+
 docker build -t notes-api .
 
+
 Run the container:
+
 docker run -p 3000:3000 notes-api
 
 Replace the ports if your application uses a different port.
@@ -73,7 +79,7 @@ mongodb://mongodb:27017/notes
 
 The application uses an asynchronous startup sequence.
 
-MongoDB is connected to before the Express server starts listening for requests.
+MongoDB is connected to the application before the Express server starts listening for requests.
 
 Application starts
        ↓
